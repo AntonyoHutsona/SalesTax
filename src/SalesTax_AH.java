@@ -24,6 +24,9 @@ public class SalesTax_AH {
 		System.out.print("Item price: $");
 		double price = keyboard.nextDouble();								// Price of item from keyboard
 
+		// Consume the remaining newline.
+		keyboard.nextLine();
+
 		// Calculations
 		double tax = price * SALES_TAX_RATE;								// Calculated sales tax
 		double total = price + tax;											// Calculated total with sales tax
