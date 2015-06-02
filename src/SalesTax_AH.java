@@ -24,7 +24,7 @@ public class SalesTax_AH {
 		System.out.print("Item price: $");
 		double price = keyboard.nextDouble();								// Price of item from keyboard
 
-		// Consume the remaining newline.
+		 // Consume the remaining newline.
 		keyboard.nextLine();
 
 		// Calculations
