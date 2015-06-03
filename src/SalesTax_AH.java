@@ -15,7 +15,7 @@ public class SalesTax_AH {
 		// Constants
 		final double SALES_TAX_RATE = 0.055;								// Sales tax rate
 
-		// Create a Scanner object to read from the keyboard
+		// Scanner object, read from keyboard
 		Scanner keyboard = new Scanner(System.in);
 
 		// Display prompts and get input
@@ -24,23 +24,23 @@ public class SalesTax_AH {
 		System.out.print("Item price: $");
 		double price = keyboard.nextDouble();								// Price of item from keyboard
 
-		// Consume the remaining newline.
+		// Consume remaining newline.
 		keyboard.nextLine();
 
 		// Calculations
 		double tax = price * SALES_TAX_RATE;								// Calculated sales tax
 		double total = price + tax;											// Calculated total with sales tax
 
-		// Create a DecimalFormat object to format dollar amounts
+		// DecimalFormat object, format to dollar amount
 		DecimalFormat dollar = new DecimalFormat("$#,##0.00");
 
 		/*
 		 * Display results
 		 * Fields should line up nicely
 		 */
-		String padFormat = "%-25s%s%n";										// left justifies first field Pads w/ space
+		String padFormat = "%-25s%s%n";										// left justifies fields fix spacing
 		System.out.printf(padFormat, item, dollar.format(price));
-		System.out.printf(padFormat, "Tax", dollar.format(price));
+		System.out.printf(padFormat, "Tax", dollar.format(tax));
 		System.out.printf(padFormat, "Total", dollar.format(total));
 	}
 }
